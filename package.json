@@ -1,0 +1,19 @@
+{
+    "name": "spongemock",
+    "version": "1.0.0",
+    "description": "from the root directory in the terminal, run `node spongemock.js \"phrase to mock\"` and be amazed.",
+    "main": "spongemock.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cjaro/spongemock.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/cjaro/spongemock/issues"
+    },
+    "homepage": "https://github.com/cjaro/spongemock#readme"
+}
