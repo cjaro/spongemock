@@ -15,5 +15,8 @@
     "bugs": {
         "url": "https://github.com/cjaro/spongemock/issues"
     },
-    "homepage": "https://github.com/cjaro/spongemock#readme"
+    "homepage": "https://github.com/cjaro/spongemock#readme",
+    "dependencies": {
+        "@types/node": "^14.14.37"
+    }
 }
