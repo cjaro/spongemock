@@ -1,8 +1,28 @@
+import os
+import discord
 import sys
-import math
 from random import choice
+from dotenv import load_dotenv
 
-if __name__ == "__main__":
+load_dotenv()
 
-    sentence = sys.argv[1]
-    print(''.join(choice((str.upper, str.lower))(c) for c in sentence))
+client = discord.Client()
+
+@client.event
+async def on_ready():
+    print('We have logged in as {0.user}'.format(client))
+
+@client.event
+async def on_message(message):
+  if message.author == client.user:
+    return
+
+  if message.content.startswith('.mock'):
+    sentence = message.content
+    print(sentence)
+    new = sentence.replace(".mock", " ")
+    mock = ''.join(choice((str.upper, str.lower))(c) for c in new)
+
+    await message.channel.send(mock)
+
+client.run(os.getenv('TOKEN'))
