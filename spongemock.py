@@ -1,6 +1,5 @@
 import os
 import discord
-import sys
 from random import choice
 from dotenv import load_dotenv
 
@@ -23,6 +22,7 @@ async def on_message(message):
     new = sentence.replace(".mock", " ")
     mock = ''.join(choice((str.upper, str.lower))(c) for c in new)
 
+    # await message.delete()
     await message.channel.send(mock)
 
 client.run(os.getenv('TOKEN'))
